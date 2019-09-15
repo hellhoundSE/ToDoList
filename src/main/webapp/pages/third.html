@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Employee Directory</title>
+</head>
+
+<body>
+
+	<h3>Employee Directory</h3>
+	<hr>	
+	<table border="1">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="tempTask : ${list}">
+				<td th:text="${tempTask.content}" />	
+				<td th:text="${tempTask.startDate}" />	
+				<td th:text="${tempTask.finishDate}" />	
+			</tr>
+		</tbody>		
+	</table>
+	
+	
+</body>
+</html>
